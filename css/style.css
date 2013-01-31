@@ -1,0 +1,281 @@
+/*All Styles*/
+body {
+	font-family: baskerville, sans-serif;
+	overflow-x: hidden; //prevents horizontal scroll
+}
+#container {
+	width:90%;
+	margin: 0 auto;
+	//border: 1px ridge #ccc;
+	padding:1em;
+	background: white;
+}
+
+footer nav ul {
+	style-type: none;
+}
+footer nav ul li {
+	padding: .5em;
+	border-right: 1px solid #ccc;
+	float: left;
+}
+.subscribe {
+	position: fixed;
+	top:.05em;
+	right:0em;
+	z-index:100;
+}
+button.subscribe {
+	color: white;
+	background: orange;
+	padding:.5em;
+	border:2px solid #efefef;
+	margin-right: 1em;
+	font-size:2em;
+}
+button.subscribe:hover {
+	cursor: pointer;
+	padding:.6em;
+}
+
+h1 {
+	font-size:4em;
+	text-shadow: 5px 5px 7px #ccc;
+	padding-left:1em;
+}
+
+h2 {
+	text-align:center;
+	text-style: italic;
+}
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+.contrast {
+	-webkit-filter: contrast(130%);
+	-moz-filter: contrast(130%);
+	filter: contrast(130%);
+}
+
+figure {
+	margin-bottom:1em;
+	position: relative;
+	overflow: hidden;
+}
+
+figcaption {
+	position: absolute;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	top: 0;
+	left: -30%;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+	padding: 10px;
+	color: white;
+	background: #3b5998;
+	background-image: url('../images/wood1.gif');
+	background-size: cover;
+	font-size:2.2em;
+	height:60%;
+	width:85%;
+}
+
+figure:hover figcaption {
+	opacity: 0.9;
+	left: 0;
+	bottom:10px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#aa0000,endColorstr=#aa0000);
+}
+
+figure img {
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+}
+
+.rounded {
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+}
+
+span.title {
+	float: right;
+	padding:5px 5px 0px 5px;
+	border-bottom:1px solid brown;
+	font-size:1.5em;
+}
+span.title:hover {
+	border-bottom:1px solid #3b5998;
+}
+
+a:link, a:visited, a:visited {
+	color: black;
+}
+
+
+.clear {
+	clear: both;
+}
+
+nav {
+	width:100%;
+	//border: 1px solid black;
+	margin-bottom: 1em;
+}
+nav ul {
+	list-style: none;
+}
+* {
+	transition: all 1s;
+}
+
+.shadow {
+	-ms-box-shadow: 5px 5px 7px #ccc;
+	-moz-box-shadow: 5px 5px 7px #ccc;
+	-webkit-box-shadow: 5px 5px 7px #ccc;
+	box-shadow: 5px 5px 7px #ccc;
+}
+
+figure.thirty:hover {
+	-webkit-filter: brightness(15%);
+	-moz-filter: brightness(15%);
+	-ms-filter: brightness(15%);
+	filter: brightness(15%);
+}
+.brightness {
+	-webkit-filter: brightness(5%);
+	-moz-filter: brightness(5%);
+	-ms-filter: brightness(5%);
+	filter: brightness(5%);
+	cursor: pointer;
+}
+
+/*full-width headers*/
+section {
+   width: 90%;
+   margin: 1em auto;
+}
+div.full {
+   position: relative;
+   background: black; 
+   padding:2em;
+}
+div.full:before, div.full:after {
+   content: "";
+   position: absolute;
+   background: black;  /* Match the background */
+   top: 0;
+   bottom: 0;
+   width: 10000px;   /* some huge width */
+} 
+div.full:before {
+   right: 100%; 
+}
+div.full:after {
+   left: 100%;
+}
+
+section#blurb {
+	color: #fff;
+	text-shadow: 5px 5px 7px #ccc;
+	font-size:1.5em;
+	font-style: italic;
+	float: right;
+}
+
+
+
+
+/*ipad*/
+@media screen and (max-width: 1211px) {	
+body {
+	//background: red;
+}
+
+.thirty {
+		width: 25%;
+		//background: #00AEFF;
+		float: left;
+		margin:1em;
+		padding:0em;
+	} 
+figcaption {
+	font-size:1.2em;
+}
+
+
+
+
+
+	
+}
+
+
+
+/*iphone*/
+@media screen and (max-width: 1000px) {
+	body {
+		//background-color: green;
+	}
+	.thirty {
+		width: 90%;
+		//background: #00AEFF;
+		display: block;
+		margin:1em;
+		padding:2em;
+	} 
+	img {
+		display: none;
+	}
+	span.title {
+		font-size:3em;
+	}
+	figcaption {
+		font-size:2em;
+		background-size: cover;
+		width:70%;
+		//width:200%;
+	}
+	h1 {
+		margin-top:2em; // so the subscribe button doesn't hide the title
+	}
+
+}
+
+
+
+/*Desktop*/
+
+@media screen and (min-width: 1212px) {	
+body {
+	//background: purple;
+}
+
+
+.thirty {
+		width: 30%;
+		//background: #00AEFF;
+		float: left;
+		margin:1em;
+		padding:0em;
+	} 
+.forty {
+		width:40%;
+	}
+.fifty {
+		width:50%;
+	}
+.sixty {
+		width: 60%;
+	}
+
+
+}
